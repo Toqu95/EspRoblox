@@ -1,9 +1,7 @@
 local Camera = game:GetService("Workspace").CurrentCamera
 local Center = Vector2.new(Camera.ViewportSize.X / 2, Camera.ViewportSize.Y)
 
-local Framework = {}
-
-function Framework.LineAdd(Part, Color)
+function LineAdd(Part, Color)
     local DrawingLines = Drawing.new("Line")
     DrawingLines.Thickness = 1
     DrawingLines.Color = Color
@@ -40,7 +38,7 @@ function Framework.LineAdd(Part, Color)
     coroutine.wrap(Update)()
 end
 
-function Framework.TextAdd(Part, Text, Color)
+function TextAdd(Part, Text, Color)
     local DrawingText = Drawing.new("Text")
     DrawingText.Text = Text
     DrawingText.Size = 20
